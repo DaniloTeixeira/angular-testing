@@ -3,13 +3,13 @@
   <app-search (searchText)="onSearchText($event)"></app-search>
 
   @for (product of products(); track product.id) {
-    @defer (on viewport) {
-      <app-card [isManagable]="true" [product]="product" (onDelete)="onDelete($event)" (onEdit)="onEdit($event)"/>
-    } @placeholder {
-      <div>Carregando...</div>
-    }
+  @defer (on viewport) {
+  <app-card [isManageable]="true" [product]="product" (onDelete)="onDelete($event)" (onEdit)="onEdit($event)" />
+  } @placeholder {
+  <div>Carregando...</div>
+  }
   } @empty {
-    <div>Nenhum produto cadastrado.</div>
+  <div>Nenhum produto cadastrado.</div>
   }
 
   <button mat-fab class="floating-button" (click)="onSubscribeProduct()">

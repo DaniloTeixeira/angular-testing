@@ -1,6 +1,7 @@
 $white: var(--branco);
 
 header {
+  max-width: 1000px;
   display: flex;
   height: 107px;
   align-items: center;
@@ -55,4 +56,3 @@ header {
     }
   }
 }
-
